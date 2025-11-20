@@ -30,15 +30,34 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnDashboard = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnDashboard = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureMinimizar = new System.Windows.Forms.PictureBox();
+            this.pictureboxCerrar = new System.Windows.Forms.PictureBox();
+            this.pictureVentana = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlMadre = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label12 = new System.Windows.Forms.Label();
+            this.dtgTablaPrestamos = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Interes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Balance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Vencimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlPaneldeControl = new System.Windows.Forms.Panel();
             this.pnlTotalporCobrar = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
@@ -59,26 +78,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.dtgTablaPrestamos = new System.Windows.Forms.DataGridView();
-            this.label12 = new System.Windows.Forms.Label();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Interes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Balance = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vencimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label13 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureboxCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureVentana)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlMadre.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgTablaPrestamos)).BeginInit();
             this.pnlPaneldeControl.SuspendLayout();
             this.pnlTotalporCobrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -88,8 +96,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pnlClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgTablaPrestamos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -104,9 +110,48 @@
             this.panel1.Size = new System.Drawing.Size(1073, 39);
             this.panel1.TabIndex = 0;
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(380, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(116, 33);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Pagos";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(258, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(116, 33);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Préstamos";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(136, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(116, 33);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Clientes";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.Location = new System.Drawing.Point(14, 3);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(116, 33);
+            this.btnDashboard.TabIndex = 0;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.UseVisualStyleBackColor = true;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.pictureMinimizar);
+            this.panel2.Controls.Add(this.pictureboxCerrar);
+            this.panel2.Controls.Add(this.pictureVentana);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label1);
@@ -115,26 +160,38 @@
             this.panel2.Size = new System.Drawing.Size(1278, 56);
             this.panel2.TabIndex = 1;
             // 
-            // label1
+            // pictureMinimizar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(130, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Sistema de Préstamos";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.pictureMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("pictureMinimizar.Image")));
+            this.pictureMinimizar.Location = new System.Drawing.Point(1158, 14);
+            this.pictureMinimizar.Name = "pictureMinimizar";
+            this.pictureMinimizar.Size = new System.Drawing.Size(31, 29);
+            this.pictureMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureMinimizar.TabIndex = 6;
+            this.pictureMinimizar.TabStop = false;
+            this.pictureMinimizar.Click += new System.EventHandler(this.pictureMinimizar_Click);
             // 
-            // pictureBox1
+            // pictureboxCerrar
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(93, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 28);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.pictureboxCerrar.Image = ((System.Drawing.Image)(resources.GetObject("pictureboxCerrar.Image")));
+            this.pictureboxCerrar.Location = new System.Drawing.Point(1232, 15);
+            this.pictureboxCerrar.Name = "pictureboxCerrar";
+            this.pictureboxCerrar.Size = new System.Drawing.Size(31, 31);
+            this.pictureboxCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureboxCerrar.TabIndex = 5;
+            this.pictureboxCerrar.TabStop = false;
+            this.pictureboxCerrar.Click += new System.EventHandler(this.pictureboxCerrar_Click);
+            // 
+            // pictureVentana
+            // 
+            this.pictureVentana.Image = ((System.Drawing.Image)(resources.GetObject("pictureVentana.Image")));
+            this.pictureVentana.Location = new System.Drawing.Point(1195, 14);
+            this.pictureVentana.Name = "pictureVentana";
+            this.pictureVentana.Size = new System.Drawing.Size(31, 30);
+            this.pictureVentana.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureVentana.TabIndex = 4;
+            this.pictureVentana.TabStop = false;
+            this.pictureVentana.Click += new System.EventHandler(this.pictureVentana_Click);
             // 
             // label2
             // 
@@ -147,41 +204,26 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Gestión Integral de préstamos y Clientes";
             // 
-            // btnDashboard
+            // pictureBox1
             // 
-            this.btnDashboard.Location = new System.Drawing.Point(14, 3);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(116, 33);
-            this.btnDashboard.TabIndex = 0;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.UseVisualStyleBackColor = true;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(93, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(31, 28);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
-            // button3
+            // label1
             // 
-            this.button3.Location = new System.Drawing.Point(136, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(116, 33);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Clientes";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(258, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(116, 33);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Préstamos";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(380, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(116, 33);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Pagos";
-            this.button5.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(130, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(137, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Sistema de Préstamos";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pnlMadre
             // 
@@ -196,6 +238,125 @@
             this.pnlMadre.Size = new System.Drawing.Size(1073, 620);
             this.pnlMadre.TabIndex = 2;
             this.pnlMadre.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMadre_Paint);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Gray;
+            this.label13.Location = new System.Drawing.Point(11, 394);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(166, 17);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "Ultimos Pagos Registrados";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.dataGridView1.GridColor = System.Drawing.Color.Gray;
+            this.dataGridView1.Location = new System.Drawing.Point(20, 414);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1040, 150);
+            this.dataGridView1.TabIndex = 3;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID Pago";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "ID Prestamo";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Cliente";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Monto Pagado";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Fecha";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Gray;
+            this.label12.Location = new System.Drawing.Point(11, 219);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(114, 17);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "Prestamos Activos";
+            // 
+            // dtgTablaPrestamos
+            // 
+            this.dtgTablaPrestamos.BackgroundColor = System.Drawing.Color.White;
+            this.dtgTablaPrestamos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgTablaPrestamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgTablaPrestamos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Cliente,
+            this.Monto,
+            this.Interes,
+            this.Total,
+            this.Balance,
+            this.Vencimiento});
+            this.dtgTablaPrestamos.GridColor = System.Drawing.Color.Gray;
+            this.dtgTablaPrestamos.Location = new System.Drawing.Point(20, 239);
+            this.dtgTablaPrestamos.Name = "dtgTablaPrestamos";
+            this.dtgTablaPrestamos.Size = new System.Drawing.Size(1040, 150);
+            this.dtgTablaPrestamos.TabIndex = 1;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // Cliente
+            // 
+            this.Cliente.HeaderText = "Cliente";
+            this.Cliente.Name = "Cliente";
+            // 
+            // Monto
+            // 
+            this.Monto.HeaderText = "Monto";
+            this.Monto.Name = "Monto";
+            // 
+            // Interes
+            // 
+            this.Interes.HeaderText = "Interes";
+            this.Interes.Name = "Interes";
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            // 
+            // Balance
+            // 
+            this.Balance.HeaderText = "Balance";
+            this.Balance.Name = "Balance";
+            // 
+            // Vencimiento
+            // 
+            this.Vencimiento.HeaderText = "Vencimiento";
+            this.Vencimiento.Name = "Vencimiento";
             // 
             // pnlPaneldeControl
             // 
@@ -404,125 +565,6 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Panel de Control";
             // 
-            // dtgTablaPrestamos
-            // 
-            this.dtgTablaPrestamos.BackgroundColor = System.Drawing.Color.White;
-            this.dtgTablaPrestamos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgTablaPrestamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgTablaPrestamos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Cliente,
-            this.Monto,
-            this.Interes,
-            this.Total,
-            this.Balance,
-            this.Vencimiento});
-            this.dtgTablaPrestamos.GridColor = System.Drawing.Color.Gray;
-            this.dtgTablaPrestamos.Location = new System.Drawing.Point(20, 239);
-            this.dtgTablaPrestamos.Name = "dtgTablaPrestamos";
-            this.dtgTablaPrestamos.Size = new System.Drawing.Size(1040, 150);
-            this.dtgTablaPrestamos.TabIndex = 1;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Gray;
-            this.label12.Location = new System.Drawing.Point(11, 219);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(114, 17);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "Prestamos Activos";
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            // 
-            // Cliente
-            // 
-            this.Cliente.HeaderText = "Cliente";
-            this.Cliente.Name = "Cliente";
-            // 
-            // Monto
-            // 
-            this.Monto.HeaderText = "Monto";
-            this.Monto.Name = "Monto";
-            // 
-            // Interes
-            // 
-            this.Interes.HeaderText = "Interes";
-            this.Interes.Name = "Interes";
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            // 
-            // Balance
-            // 
-            this.Balance.HeaderText = "Balance";
-            this.Balance.Name = "Balance";
-            // 
-            // Vencimiento
-            // 
-            this.Vencimiento.HeaderText = "Vencimiento";
-            this.Vencimiento.Name = "Vencimiento";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Gray;
-            this.label13.Location = new System.Drawing.Point(11, 394);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(166, 17);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "Ultimos Pagos Registrados";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
-            this.dataGridView1.GridColor = System.Drawing.Color.Gray;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 414);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1040, 150);
-            this.dataGridView1.TabIndex = 3;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID Pago";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "ID Prestamo";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Cliente";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Monto Pagado";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Fecha";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -538,9 +580,14 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureboxCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureVentana)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlMadre.ResumeLayout(false);
             this.pnlMadre.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgTablaPrestamos)).EndInit();
             this.pnlPaneldeControl.ResumeLayout(false);
             this.pnlPaneldeControl.PerformLayout();
             this.pnlTotalporCobrar.ResumeLayout(false);
@@ -555,8 +602,6 @@
             this.pnlClientes.ResumeLayout(false);
             this.pnlClientes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgTablaPrestamos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -609,6 +654,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.PictureBox pictureboxCerrar;
+        private System.Windows.Forms.PictureBox pictureVentana;
+        private System.Windows.Forms.PictureBox pictureMinimizar;
     }
 }
 

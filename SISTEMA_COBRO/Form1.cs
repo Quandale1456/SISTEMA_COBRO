@@ -77,5 +77,32 @@ namespace SISTEMA_COBRO
         {
 
         }
+
+        
+
+        
+
+        
+
+        private void pictureboxCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pictureVentana_Click(object sender, EventArgs e)
+        {
+            
+        
+            if (this.WindowState == FormWindowState.Maximized)
+                this.WindowState = FormWindowState.Normal;
+            else
+                this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void pictureMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+    
     }
 }
