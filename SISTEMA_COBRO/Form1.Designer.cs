@@ -149,7 +149,9 @@
             // 
             // btnDashboard
             // 
-            this.btnDashboard.Location = new System.Drawing.Point(14, 3);
+            this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
+            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashboard.Location = new System.Drawing.Point(135, 3);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(116, 33);
             this.btnDashboard.TabIndex = 0;
@@ -158,7 +160,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(136, 3);
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(257, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(116, 33);
             this.button3.TabIndex = 2;
@@ -167,7 +171,9 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(258, 3);
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(379, 3);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(116, 33);
             this.button4.TabIndex = 3;
@@ -176,7 +182,9 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(380, 3);
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(501, 3);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(116, 33);
             this.button5.TabIndex = 4;
@@ -235,7 +243,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(19, 12);
+            this.pictureBox5.Location = new System.Drawing.Point(29, 12);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(27, 27);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
