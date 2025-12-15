@@ -120,5 +120,68 @@ namespace SISTEMA_COBRO
             
             return exito;
         }
+
+        // ===================== CLIENTES =====================
+
+        public bool ExisteClientePorEmail(string email)
+        {
+            bool existe = false;
+
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    conn.Open();
+                    string query = "SELECT COUNT(*) FROM Clientes WHERE Email = @Email";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Email", email);
+                        int count = Convert.ToInt32(cmd.ExecuteScalar());
+                        existe = count > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al verificar el email del cliente: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return existe;
+        }
+
+        public bool InsertarCliente(string nombre, string telefono, string direccion, string email)
+        {
+            bool exito = false;
+
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    conn.Open();
+                    // Asumimos una tabla Clientes con columnas:
+                    // ClienteID (IDENTITY), Nombre, Telefono, Direccion, Email
+                    string query = "INSERT INTO Clientes (Nombre, Telefono, Direccion, Email) VALUES (@Nombre, @Telefono, @Direccion, @Email)";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Nombre", nombre);
+                        cmd.Parameters.AddWithValue("@Telefono", telefono);
+                        cmd.Parameters.AddWithValue("@Direccion", direccion);
+                        cmd.Parameters.AddWithValue("@Email", email);
+
+                        int filasAfectadas = cmd.ExecuteNonQuery();
+                        exito = filasAfectadas > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al insertar cliente: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                exito = false;
+            }
+
+            return exito;
+        }
     }
 }

@@ -120,5 +120,10 @@ namespace SISTEMA_COBRO
             txtEmail.Text = "";
             txtContraseña.Focus();
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

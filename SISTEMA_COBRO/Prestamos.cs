@@ -23,5 +23,19 @@ namespace SISTEMA_COBRO
             this.prestamosTableAdapter.Fill(this.sistemaPrestamosDBDataSet.Prestamos);
 
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form Prestamos = new NuevoPrestamos();
+            Prestamos.Show();
+
+            Prestamos.Visible = true;
+            Visible = true;
+        }
     }
 }

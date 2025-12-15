@@ -103,6 +103,32 @@ namespace SISTEMA_COBRO
         {
             this.WindowState = FormWindowState.Minimized;
         }
-    
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form Form1 = new NuevoCliente();
+            Form1.Show();
+
+            Form1.Visible = true;
+            Visible = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form Form1 = new NuevoUsuario();
+            Form1.Show();
+
+            Form1.Visible = true;
+            Visible = true;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form Form1 = new Prestamos();
+            Form1.Show();
+
+            Form1.Visible = true;
+            Visible = true;
+        }
     }
 }

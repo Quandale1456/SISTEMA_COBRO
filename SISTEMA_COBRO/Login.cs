@@ -125,5 +125,10 @@ namespace SISTEMA_COBRO
                 Application.Exit();
             }
         }
+
+        private void btnIniciarSesion_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
