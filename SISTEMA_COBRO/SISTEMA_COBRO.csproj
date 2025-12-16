@@ -75,6 +75,12 @@
     <Compile Include="NuevoUsuario.Designer.cs">
       <DependentUpon>NuevoUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pagos.Designer.cs">
+      <DependentUpon>Pagos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Prestamos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoUsuario.resx">
       <DependentUpon>NuevoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pagos.resx">
+      <DependentUpon>Pagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prestamos.resx">
       <DependentUpon>Prestamos.cs</DependentUpon>
