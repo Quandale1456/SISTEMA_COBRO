@@ -97,19 +97,9 @@ namespace SISTEMA_COBRO
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoGenerateColumns = true;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.prestamoIDDataGridViewTextBoxColumn,
-            this.clienteIDDataGridViewTextBoxColumn,
-            this.montoDataGridViewTextBoxColumn,
-            this.tasaInteresDataGridViewTextBoxColumn,
-            this.plazoMesesDataGridViewTextBoxColumn,
-            this.fechaInicioDataGridViewTextBoxColumn,
-            this.fechaFinDataGridViewTextBoxColumn,
-            this.formaPagoDataGridViewTextBoxColumn,
-            this.estadoDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.prestamosBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(16, 149);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

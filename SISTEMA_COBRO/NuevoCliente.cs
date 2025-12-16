@@ -36,6 +36,7 @@ namespace SISTEMA_COBRO
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
             string nombre = txtNombre.Text.Trim();
+            string cedula = txtCedula.Text.Trim();
             string telefono = txtTelefono.Text.Trim();
             string direccion = txtDireccion.Text.Trim();
             string email = txtCorreo.Text.Trim();
@@ -46,6 +47,23 @@ namespace SISTEMA_COBRO
                 MessageBox.Show("Por favor ingrese el nombre del cliente.", "Validación",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtNombre.Focus();
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(cedula))
+            {
+                MessageBox.Show("Por favor ingrese la cédula del cliente.", "Validación",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCedula.Focus();
+                return;
+            }
+
+            // Verificar cédula duplicada
+            if (_conexion.ExisteClientePorCedula(cedula))
+            {
+                MessageBox.Show("Ya existe un cliente con esa cédula.", "Duplicado",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtCedula.Focus();
                 return;
             }
 
@@ -81,7 +99,7 @@ namespace SISTEMA_COBRO
                 return;
             }
 
-            // Verificar duplicado
+            // Verificar email duplicado
             if (_conexion.ExisteClientePorEmail(email))
             {
                 MessageBox.Show("Ya existe un cliente con ese email.", "Duplicado",
@@ -91,7 +109,7 @@ namespace SISTEMA_COBRO
             }
 
             // Insertar en BD
-            bool exito = _conexion.InsertarCliente(nombre, telefono, direccion, email);
+            bool exito = _conexion.InsertarCliente(nombre, cedula, telefono, direccion, email);
 
             if (exito)
             {
@@ -270,6 +288,7 @@ namespace SISTEMA_COBRO
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // BarraTitulo
             // 

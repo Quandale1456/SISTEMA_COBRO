@@ -279,6 +279,7 @@ namespace SISTEMA_COBRO
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NuevoPrestamos";
             this.Text = "NuevoPrestamos";
+            this.Load += new System.EventHandler(this.NuevoPrestamos_Load);
             this.BarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);
